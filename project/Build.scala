@@ -41,7 +41,7 @@ object Dependencies {
   import Dependency._
  
   val all = Seq(
-    akkaKernel, akkaSlf4j, logback, sprayClient
+    akkaKernel, akkaSlf4j, logback, sprayClient, xml
   )
 }
  
@@ -51,10 +51,12 @@ object Dependency {
     val Akka      = "2.3.4"
     val Logback   = "1.0.0"
     val Spray     = "1.3.1"
+    val Xml       = "1.0.2"
   }
  
-  val akkaKernel  = "com.typesafe.akka" %% "akka-kernel" % V.Akka
-  val akkaSlf4j   = "com.typesafe.akka" %% "akka-slf4j"  % V.Akka
-  val logback     = "ch.qos.logback"    % "logback-classic" % V.Logback
-  val sprayClient = "io.spray" %% "spray-can" % V.Spray
+  val akkaKernel  = "com.typesafe.akka"      %% "akka-kernel"     % V.Akka
+  val akkaSlf4j   = "com.typesafe.akka"      %% "akka-slf4j"      % V.Akka
+  val logback     = "ch.qos.logback"         %  "logback-classic" % V.Logback
+  val sprayClient = "io.spray"               %% "spray-can"       % V.Spray
+  val xml         = "org.scala-lang.modules" %% "scala-xml"       % V.Xml
 }
