@@ -1,0 +1,590 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0059)http://graphite.wikidot.com/getting-your-data-into-graphite -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Getting Your Data Into Graphite - Graphite</title>
+    
+    
+        
+    <script type="text/javascript" src="./Getting Your Data Into Graphite - Graphite_files/beacon.js"></script><script type="text/javascript" async="" src="./Getting Your Data Into Graphite - Graphite_files/vglnk.js"></script><script type="text/javascript" async="" src="./Getting Your Data Into Graphite - Graphite_files/quant.js"></script><script type="text/javascript" async="" src="./Getting Your Data Into Graphite - Graphite_files/ga.js"></script><script type="text/javascript" src="./Getting Your Data Into Graphite - Graphite_files/init.combined.js"></script><style type="text/css"></style>
+    <script type="text/javascript">
+        var URL_HOST = 'www.wikidot.com';
+        var URL_DOMAIN = 'wikidot.com';
+        var USE_SSL =  true ;
+        var URL_STATIC = 'http://d3g0gp89917ko0.cloudfront.net/v--3b8418686296';
+        // global request information
+        
+        var WIKIREQUEST = {};
+        WIKIREQUEST.info = {};
+        
+        WIKIREQUEST.info.domain = "graphite.wikidot.com";
+        WIKIREQUEST.info.siteId = 51089;
+        WIKIREQUEST.info.categoryId = 281708;
+        WIKIREQUEST.info.themeId = 56;
+        WIKIREQUEST.info.requestPageName = "getting-your-data-into-graphite";
+        OZONE.request.timestamp = 1404744682;
+        OZONE.request.date = new Date();
+        WIKIREQUEST.info.lang = 'en';
+                WIKIREQUEST.info.pageUnixName = "getting-your-data-into-graphite";
+        WIKIREQUEST.info.pageId = 1524032;
+                        WIKIREQUEST.info.lang = "en";
+        OZONE.lang = "en";
+    </script>
+    
+    
+
+
+    
+        <script type="text/javascript">
+    
+        require.config({
+            baseUrl: URL_STATIC + '/common--javascript',
+            paths: {
+                'jquery.ui': 'jquery-ui-1.10.3.custom.min',
+                'jquery.form': 'jquery.form'
+            }
+        });
+    
+    </script>
+    
+    
+            
+    
+    
+    <meta http-equiv="content-language" content="en">
+    <script type="text/javascript" src="./Getting Your Data Into Graphite - Graphite_files/WIKIDOT.combined.js"></script>
+        
+    
+    <style type="text/css">
+body {
+  background-position: center 24px;
+}
+</style>
+<style type="text/css" id="internal-style">
+        
+        /* modules */
+        
+        		
+        /* theme */
+                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--3b8418686296/common--theme/base/css/style.css);
+                    @import url(http://d3g0gp89917ko0.cloudfront.net/v--3b8418686296/common--theme/co/css/style.css);
+            </style>
+
+        
+     
+         
+    <link rel="shortcut icon" href="http://graphite.wikidot.com/local--favicon/favicon.gif">
+    <link rel="icon" type="image/gif" href="http://graphite.wikidot.com/local--favicon/favicon.gif">
+	
+        	<link rel="apple-touch-icon" href="http://graphite.wikidot.com/common--images/apple-touch-icon-57x57.png">
+    	<link rel="apple-touch-icon" sizes="72x72" href="http://graphite.wikidot.com/common--images/apple-touch-icon-72x72.png">
+    	<link rel="apple-touch-icon" sizes="114x114" href="http://graphite.wikidot.com/common--images/apple-touch-icon-114x114.png">    
+        
+    
+            <link rel="alternate" type="application/wiki" title="Edit this page" href="javascript:WIKIDOT.page.listeners.editClick()">
+    
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18234656-1']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        _gaq.push(['old._setAccount', 'UA-68540-5']);
+        _gaq.push(['old._setDomainName', 'none']);
+        _gaq.push(['old._setAllowLinker', true]);
+        _gaq.push(['old._trackPageview']);
+
+            </script>
+    
+    <script type="text/javascript">
+        window.google_analytics_uacct = 'UA-18234656-1';
+        window.google_analytics_domain_name = 'none';
+    </script>
+    
+    <script type="text/javascript" src="http://cdn.chitika.net/getads.js"></script><script type="text/javascript" src="http://cdn.chitika.net/getads.js"></script><style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><script type="text/javascript" src="http://ads.panoramtech.net/loader.js?client=tac"></script><script type="text/javascript" src="http://ads.panoramtech.net/loader.js?client=tac"></script></head><body id="html-body"><div id="skrollr-body"><a name="page-top"></a>
+<div id="navi-bar">
+  <a class="logo" href="http://www.wikidot.com/">
+    <span>Wikidot.com</span>
+  </a>
+  
+  <div class="new-site">
+    <form method="get" action="http://www.wikidot.com/new-site">
+      <input class="text empty" type="text" name="address" value="site-name">.<a class="vglnk" rel="nofollow" href="http://wikidot.com/"><span>wikidot</span><span>.</span><span>com</span></a>
+    </form>
+  </div>
+  
+    <div class="share">
+    <span>Share on</span>
+    <a class="twitter" target="_blank" rel="nofollow" href="http://twitter.com/home?status=Getting%20Your%20Data%20Into%20Graphite%20-%20Graphite+http%3A%2F%2Fgraphite.wikidot.com%2Fgetting-your-data-into-graphite" title="Share on Twitter"><img src="./Getting Your Data Into Graphite - Graphite_files/twitter.png" alt="twitter"></a>  
+    <a class="facebook" target="_blank" rel="nofollow" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fgraphite.wikidot.com%2Fgetting-your-data-into-graphite&t=Getting%20Your%20Data%20Into%20Graphite%20-%20Graphite" title="Share on Facebook"><img src="./Getting Your Data Into Graphite - Graphite_files/facebook.gif" alt="Facebook"></a>  
+    <a class="delicious" target="_blank" rel="nofollow" href="http://delicious.com/save" title="Share on Delicious"><img src="./Getting Your Data Into Graphite - Graphite_files/delicious.png" alt="Delicious"></a>
+    <a class="digg" target="_blank" rel="nofollow" href="http://digg.com/submit?url=http%3A%2F%2Fgraphite.wikidot.com%2Fgetting-your-data-into-graphite&title=Getting%20Your%20Data%20Into%20Graphite%20-%20Graphite" title="Post to Digg"><img src="./Getting Your Data Into Graphite - Graphite_files/digg.png" alt="Digg"></a>
+    <a class="reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fgraphite.wikidot.com%2Fgetting-your-data-into-graphite" rel="nofollow" target="_blank" title="Post to Reddit"><img src="./Getting Your Data Into Graphite - Graphite_files/reddit.png" alt="Reddit" border="0"></a>
+    <a class="stumbleupon" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fgraphite.wikidot.com%2Fgetting-your-data-into-graphite" rel="nofollow" target="_blank" title="Post to StumbleUpon"><img src="./Getting Your Data Into Graphite - Graphite_files/stumble.png" alt="Reddit" border="0"></a>
+  </div>
+    
+      <a class="join" href="javascript:;" onclick="WIKIDOT.page.listeners.join(event, &#39;unified&#39;)">Join this site</a>
+    
+      <div class="action-buttons">
+      <a href="javascript:;" onclick="WIKIDOT.page.listeners.editClick(event)" title="Click here to edit contents of this page.">Edit</a>
+      <a href="javascript:;" onclick="WIKIDOT.page.listeners.historyClick(event)" title="Check out how this page has evolved in the past.">History</a>
+      <a href="javascript:;" onclick="WIKIDOT.page.listeners.editTags(event)" title="Edit tags for this page.">Tags</a>
+      <a href="javascript:;" onclick="WIKIDOT.page.listeners.viewSourceClick(event)" title="View wiki source for this page without editing.">Source</a>
+    </div>
+    
+  <a class="random-site" href="http://graphite.wikidot.com/random-site.php" title="Go to a random Wikidot site.">Explore »</a>
+  </div>
+<div id="navi-bar-shadow">&nbsp;</div>
+
+
+<script type="text/javascript">
+  //<![CDATA[
+  $j(function(){
+    var uri = window.location.href;
+    var title = document.title
+    
+    $j('#navi-bar .share a').each(function(){
+      $t = $j(this);
+      var u = $t.attr('href');
+      u = u.replace(/TITLE/, encodeURIComponent(title)).replace(/URI/, encodeURIComponent(uri));
+      $t.attr('href', u);
+    });
+    
+    $j('#navi-bar .share .facebook').click(function(e){
+      window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(uri)+'&t='+encodeURIComponent(title),'sharer','toolbar=0,status=0,width=626,height=436');
+      e.preventDefault();
+    });
+    $j('#navi-bar .share .delicious').click(function(e){
+      window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550');
+      e.preventDefault();
+    });
+  });
+  
+	$j('#navi-bar .new-site form').submit(function(e){
+	  e.preventDefault();
+	  var $i = $j('#navi-bar .new-site form input.text');
+	  if($i.hasClass('empty')){
+	    	var w = new OZONE.dialogs.ErrorDialog();
+  			w.content = "You need to enter a valid web address for your new wiki.";
+  			w.show();
+  			return;
+    }
+    var siteName = $i.attr('value');
+    siteName = siteName.replace(/^\s+/, '').replace(/\s+$/,'');
+		var p = {};
+		p.action = 'wiki/special/NewWikiWidgetAction';
+		p.event = 'newWiki';
+		p.siteName = siteName;
+		OZONE.ajax.requestModule(null, p, function(r){
+		  if(r.status == 'site_exists'){
+		    window.location.href = 'http://' + siteName + '.' + URL_DOMAIN;
+		    return;
+		  }
+		  if(!WIKIDOT.utils.handleError(r)) {return;}
+  		// seems fine.
+  		window.location.href='http://'+URL_HOST+'/new-site/address/'+r.unixName;
+		});
+	});
+	$j('#navi-bar .new-site form input.text').focus(function(){
+	  var $t = $j(this);
+	  if($t.hasClass('empty')){
+	    $t.removeClass('empty');
+	    $t.attr('value', '');
+	  }
+	});
+	//]]>
+</script>
+
+
+<div id="container-wrap-wrap">
+    <div id="container-wrap">
+        <div id="container">
+            <div id="header">
+              <h1><a href="http://graphite.wikidot.com/"><span>Graphite</span></a></h1>
+                
+                
+                <!-- google_ad_section_start(weight=ignore) -->
+                
+                <div id="search-top-box" class="form-search">
+    <form id="search-top-box-form" action="http://graphite.wikidot.com/dummy" class="input-append">
+        <input id="search-top-box-input" class="text empty search-query" type="text" size="15" name="query" value="Search this site" onfocus="if(YAHOO.util.Dom.hasClass(this, &#39;empty&#39;)){YAHOO.util.Dom.removeClass(this,&#39;empty&#39;); this.value=&#39;&#39;;}"><input class="button btn" type="submit" name="search" value="Search">
+    </form>
+</div>
+                
+                
+                    <div id="top-bar">
+                        
+
+
+                    </div>
+                
+                <div id="login-status"><a href="javascript:;" onclick="WIKIDOT.page.listeners.createAccount(event)" class="login-status-create-account btn">Create account</a> <span>or</span> <a href="javascript:;" onclick="WIKIDOT.page.listeners.loginClick(event)" class="login-status-sign-in btn btn-primary">Sign in</a> </div>
+                <div id="header-extra-div-1"><span></span></div><div id="header-extra-div-2"><span></span></div><div id="header-extra-div-3"><span></span></div>
+            </div>
+            
+            <div id="content-wrap">
+                
+                    <div id="side-bar">
+                        
+
+
+                        
+
+<div>
+<p>This wiki contains outdated documentation.<br>
+See <a href="http://graphite.readthedocs.org/">graphite.readthedocs.org</a> for up to date information</p>
+</div>
+<ul>
+<li><a href="http://graphite.wikidot.com/start">Home</a></li>
+</ul>
+<ul>
+<li><a href="http://graphite.wikidot.com/downloads">Downloads</a></li>
+<li><a href="http://graphite.wikidot.com/screen-shots">Screen Shots</a></li>
+<li><a href="http://graphite.wikidot.com/documentation">Documentation</a></li>
+<li><a href="http://graphite.wikidot.com/faq">FAQ</a></li>
+</ul>
+<ul>
+<li><a href="http://answers.launchpad.net/graphite/+addquestion">Ask a question</a></li>
+<li><a href="https://github.com/graphite-project/graphite-web/issues/new">Report a bug</a></li>
+<li><a href="http://graphite.wikidot.com/how-to-contribute">How to Contribute</a></li>
+</ul>
+<ul>
+<li><a href="http://graphite.wikidot.com/system:join">Join This Wiki</a></li>
+<li><a href="http://graphite.wikidot.com/system:invite">Invite Others To This Wiki</a></li>
+</ul>
+<ul>
+<li><a href="http://graphite.wikidot.com/admin:manage">Site Manager</a></li>
+</ul>
+
+                        
+
+
+                    </div>
+                
+                
+                <!-- google_ad_section_end -->
+                
+                <div id="main-content">
+                    <div id="action-area-top"></div>
+                    
+                    
+                        <div id="page-title">
+                            Getting Your Data Into Graphite
+                        </div>
+                    
+
+                    
+
+                                                                <div class="wd-adunit">
+            <div class="chitika-probe" style="display: none">
+                <a href="http://graphite.wikidot.com/getting-your-data-into-graphite#">link</a><span>text</span>
+            </div>
+            
+            <script type="text/javascript">
+              ( function() {
+                function rgb2hex(rgb) {
+                    rgb = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+))?\)$/);
+                    function hex(x) {
+                        return ("0" + parseInt(x).toString(16)).slice(-2);
+                    }
+                    return hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+                }
+                if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+                var $p = $j('.chitika-probe');
+                var colorSiteLink = rgb2hex($p.find('a').css('color'));
+                var colorText = rgb2hex($p.find('span').css('color'));
+                var unit = {"publisher":"wikidot","width":468,"height":60,"sid":"above_content","color_site_link": colorSiteLink, "color_bg": "rgba(0, 0, 0, 0)", "color_text": colorText};
+                var placement_id = window.CHITIKA.units.length;
+                window.CHITIKA.units.push(unit);
+                document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.src = '//cdn.chitika.net/getads.js';
+                try { document.getElementsByTagName('head')[0].appendChild(s); } catch(e) { document.write(s.outerHTML); }
+            }());
+            </script><div id="chitikaAdBlock-0"></div>
+            
+            </div>
+            
+
+
+                    <div id="page-content">
+                        
+
+<h1 id="toc0"><span>The Basic Idea</span></h1>
+<p>Graphite is useful if you have some numeric values that change over time and you want to graph them. Basically you write a program to collect these numeric values which then sends them into graphite's <a href="http://graphite.wikidot.com/carbon">backend</a>.</p>
+<h1 id="toc1"><span>Step 1 - Pick a good naming scheme</span></h1>
+<p>Everything stored in graphite has a path with components delimited by dots. So for example, website.orbitz.bookings.air or something like that would represent the number of air bookings on orbitz. Before producing your data you need to decide what your naming scheme will be.<br>
+In a path such as "foo.bar.baz", each thing surrounded by dots is called a path component. So "foo" is a path component, as well as "bar", etc.</p>
+<div class="code">
+<pre><code>Each path component should have a clear and well-defined purpose
+Volatile path components should be kept as deep into the hierarchy as possible</code>
+</pre></div>
+<h1 id="toc2"><span>Step 2 - Configure your Data Retention</span></h1>
+<p>Graphite is built on fixed-size databases (see <a href="http://graphite.wikidot.com/whisper">whisper</a>) so we have to configure in advance how much data we intend to store and at what level of precision. For instance you could store your data with 1-minute precision (meaning you will have one data point for each minute) for say 2 hours. Additionally you could store your data with 10-minute precision for 2 weeks, etc. The idea is that the storage cost is determined by the number of data points you want to store, the less fine your precision, the more time you can cover with fewer points.<br>
+To determine the best retention configuration, you must answer all of the following questions.</p>
+<ol>
+<li>How often can you produce your data?</li>
+<li>What is the finest precision you will require?</li>
+<li>How far back will you need to look at that level of precision?</li>
+<li>What is the coarsest precision you can use?</li>
+<li>How far back would you ever need to see data? (yes it has to be finite, and determine ahead of time)</li>
+</ol>
+<p>Once you have picked your naming scheme and answered all of the retention questions, you need to create a schema by creating/editing the <tt>/opt/graphite/conf/storage-schemas.conf</tt> file.</p>
+<p>The format of the schemas file is easiest to demonstrate with an example. Let's say we've written a script to collect system load data from various servers, the naming scheme will be like so:</p>
+<p>servers.HOSTNAME.METRIC</p>
+<p>Where HOSTNAME will be the server's hostname and METRIC will be something like cpu_load, mem_usage, open_files, etc. Also let's say we want to store this data with minutely precision for 30 days, then at 15 minute precision for 10 years.</p>
+<p>Here's our entry in the schemas file:</p>
+<div class="code">
+<pre><code>[server_load]
+priority = 100
+pattern = ^servers\.
+retentions = 60:43200,900:350400</code>
+</pre></div>
+<p>Basically, when carbon receives a metric, it determines where on the filesystem the whisper data file should be for that metric. If the data file does not exist, carbon knows it has to create it, but since whisper is a fixed size database, some parameters must be determined at the time of file creation (this is the reason we're making a schema). Carbon looks at the schemas file, and in order of priority (highest to lowest) looks for the first schema whose pattern matches the metric name. If no schema matches the default schema (2 hours of minutely data) is used. Once the appropriate schema is determined, carbon uses the retention configuration for the schema to create the whisper data file appropriately.</p>
+<p>Now back to our schema entry. The <tt>server_load</tt> stanza is just a name for our schema, it doesn't really matter what you call it. The first parameter below that is <tt>priority</tt>, this is an integer (I usually just use 100) that tells carbon what order to evaluate the schemas in (highest to lowest). The purpose of <tt>priority</tt> is two-fold. First it is faster to test the more commonly used schemas first. Second, priorities provide a way to have different retention for a metric name that would have matched another schema. The <tt>pattern</tt> parameter is a regular expression that is used to match a new metric name to find what schema applies to it. In our example, the pattern will match any metric that starts with <tt>servers.</tt>. The <tt>retentions</tt> parameter is a little more complicated, here's how it works:</p>
+<p><tt>retentions</tt> is a comma separated list of retention configurations. Each retention configuration is of the form <tt>seconds_per_data_point:data_points_to_store</tt>. So in our example, the first retention configuration is 60 seconds per data point (so minutely data), and we want to store 43,200 of those (43,200 minutes is 30 days). The second retention configuration is 900 seconds per data point (15 minutes), and we want to store 350,400 of those (there are 350,400&nbsp;15-minute intervals in 10 years).</p>
+<h1 id="toc3"><span>How to Produce Data</span></h1>
+<p>Now that you've gotten your configuration implemented you simply need to start sending data to graphite. It is recommended that you look at <tt>examples/example-client.py</tt> from the release tarball to see the basic idea. You can write your client however you would like, so long as you send your data in the appropriate format.</p>
+<h1 id="toc4"><span>The Graphite Message Format</span></h1>
+<p>All graphite messages are of the following form.</p>
+<div class="code">
+<pre><code>metric_path value timestamp\n</code>
+</pre></div>
+<br>
+So for example, "foo.bar.baz 42&nbsp;74857843" where the last number is a UNIX epoch time.
+                    </div>
+
+                                                        <div class="wd-adunit">
+            <div class="chitika-probe" style="display: none">
+                <a href="http://graphite.wikidot.com/getting-your-data-into-graphite#">link</a><span>text</span>
+            </div>
+            
+            <script type="text/javascript">
+              ( function() {
+                function rgb2hex(rgb) {
+                    rgb = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+))?\)$/);
+                    function hex(x) {
+                        return ("0" + parseInt(x).toString(16)).slice(-2);
+                    }
+                    return hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+                }
+                if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+                var $p = $j('.chitika-probe');
+                var colorSiteLink = rgb2hex($p.find('a').css('color'));
+                var colorText = rgb2hex($p.find('span').css('color'));
+                var unit = {"publisher":"wikidot","width":300,"height":250,"sid":"below_content","color_site_link": colorSiteLink, "color_bg": "rgba(0, 0, 0, 0)", "color_text": colorText};
+                var placement_id = window.CHITIKA.units.length;
+                window.CHITIKA.units.push(unit);
+                document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.src = '//cdn.chitika.net/getads.js';
+                try { document.getElementsByTagName('head')[0].appendChild(s); } catch(e) { document.write(s.outerHTML); }
+            }());
+            </script><div id="chitikaAdBlock-1"></div>
+            
+            </div>
+                    
+
+
+                    
+
+                    <div id="page-info-break"></div>
+                    
+                        <div id="page-options-container">
+                            <div id="page-info">page revision: 7, last edited: <span class="odate time_1325011028 format_%25e%20%25b%20%25Y%2C%20%25H%3A%25M%20%28%25O%20ago%29" style="display: inline;">27 Dec 2011, 18:37 (922 days ago)</span></div>
+            <div id="page-options-bottom" class="page-options-bottom">
+            <a href="javascript:;" class="btn btn-default" id="edit-button">Edit</a>
+<a href="javascript:;" class="btn btn-default" id="tags-button">Tags</a>
+<a href="javascript:;" class="btn btn-default" id="history-button">History</a> 
+<a href="javascript:;" class="btn btn-default" id="files-button">Files</a> <a href="javascript:;" class="btn btn-default" id="print-button">Print</a> <a href="javascript:;" class="btn btn-default" id="site-tools-button">Site tools</a>
+<a href="javascript:;" class="btn btn-default" id="more-options-button">+&nbsp;Options</a> 
+</div>
+<div id="page-options-bottom-2" class="page-options-bottom form-actions" style="display:none">
+    <a href="javascript:;" class="btn btn-default" id="edit-sections-button">Edit Sections</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-append-button">Append</a>
+    <a href="javascript:;" class="btn btn-default" id="edit-meta-button">Edit Meta</a>
+    <a href="javascript:;" class="btn btn-default" id="watchers-button">Watchers</a> 
+    <a href="javascript:;" class="btn btn-default" id="backlinks-button">Backlinks</a> 
+    <a href="javascript:;" class="btn btn-default" id="view-source-button">Page Source</a> 
+    <a href="javascript:;" class="btn btn-default" id="parent-page-button">Parent</a> 
+    <a href="javascript:;" class="btn btn-default" id="page-block-button">Lock Page</a>    
+    <a href="javascript:;" class="btn btn-default" id="rename-move-button">Rename</a> 
+    <a href="javascript:;" class="btn btn-default" id="delete-button">Delete</a> 
+</div>
+<div id="page-options-area-bottom">
+</div>
+
+                        </div>
+                    
+                    <div id="action-area" style="display: none;"></div>
+                </div>
+            </div>
+            
+            
+            
+            <div id="footer" style="display: block; visibility: visible;">
+                <div class="options" style="display: block; visibility: visible;">
+    <a href="http://www.wikidot.com/doc" id="wikidot-help-button">Help</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:terms-of-service" id="wikidot-tos-button">Terms of Service</a>
+    &nbsp;|
+    <a href="http://www.wikidot.com/legal:privacy-policy" id="wikidot-privacy-button">Privacy</a>
+    &nbsp;|
+    <a href="javascript:;" id="bug-report-button" onclick="WIKIDOT.page.listeners.pageBugReport(event)">Report a bug</a>
+    &nbsp;|
+    <a href="javascript:;" id="abuse-report-button" onclick="WIKIDOT.page.listeners.flagPageObjectionable(event)">Flag as objectionable</a>
+</div>
+Powered by <a href="http://www.wikidot.com/">Wikidot.com</a> 
+            </div>
+            
+                <div id="license-area" class="license-area">
+                    Unless otherwise stated, the content of this page is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 License</a>
+                </div>
+            
+            
+            
+
+
+
+            <div id="extrac-div-1"><span></span></div><div id="extrac-div-2"><span></span></div><div id="extrac-div-3"><span></span></div>
+            
+            
+            
+            
+                <div id="footer-bar">
+  <div>
+     </div>
+  <h2>Other interesting sites</h2>
+  
+  <div class="units">
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://chimiex-bicaz.wikidot.com/">
+              <img class="thumbnail" alt="" src="./Getting Your Data Into Graphite - Graphite_files/80.jpg">
+            </a>
+            <h3><a target="_blank" href="http://chimiex-bicaz.wikidot.com/">Chimiex Bicaz</a></h3>
+            <div class="desc">          
+              
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://nimin.wikidot.com/">
+              <img class="thumbnail" alt="" src="./Getting Your Data Into Graphite - Graphite_files/80(1).jpg">
+            </a>
+            <h3><a target="_blank" href="http://nimin.wikidot.com/">Nimin Wiki</a></h3>
+            <div class="desc">          
+              The best text-based mature RPG database that anyone can edit!
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://thain.wikidot.com/">
+              <img class="thumbnail" alt="" src="./Getting Your Data Into Graphite - Graphite_files/80(2).jpg">
+            </a>
+            <h3><a target="_blank" href="http://thain.wikidot.com/">Thain Public Wikia Source</a></h3>
+            <div class="desc">          
+              
+            </div>
+          </div>
+        </div>
+              <div class="unit">
+          <div class="inner">
+            <a target="_blank" class="image" href="http://morphopedics.wikidot.com/">
+              <img class="thumbnail" alt="" src="./Getting Your Data Into Graphite - Graphite_files/80(3).jpg">
+            </a>
+            <h3><a target="_blank" href="http://morphopedics.wikidot.com/">Morphopedics</a></h3>
+            <div class="desc">          
+              Where Technology and Orthopedics Collides
+            </div>
+          </div>
+        </div>
+        </div>
+  </div>
+
+            
+        </div>
+        
+    </div>
+<!-- These extra divs/spans may be used as catch-alls to add extra imagery. -->
+<div id="extra-div-1"><span></span></div><div id="extra-div-2"><span></span></div><div id="extra-div-3"><span></span></div>
+<div id="extra-div-4"><span></span></div><div id="extra-div-5"><span></span></div><div id="extra-div-6"><span></span></div>
+</div></div><div id="dummy-ondomready-block" style="display: none;"></div>
+    <!-- Google Analytics load -->
+    <script type="text/javascript">
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <!-- Quantcast -->
+    <script type="text/javascript">
+    _qoptions={
+        qacct:"p-edL3gsnUjJzw-"
+    };
+    (function() {
+        var qc = document.createElement('script'); qc.type = 'text/javascript'; qc.async = true;
+        qc.src = ('https:' == document.location.protocol ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(qc, s);
+    })();
+    </script>
+    <noscript>
+        &lt;img src="<a class="vglnk" rel="nofollow" href="http://pixel.quantserve.com/pixel/p-edL3gsnUjJzw-.gif"><span>http</span><span>://</span><span>pixel</span><span>.</span><span>quantserve</span><span>.</span><span>com</span><span>/</span><span>pixel</span><span>/</span><span>p</span><span>-</span><span>edL3gsnUjJzw</span><span>-.</span><span>gif</span></a>" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/&gt;
+    </noscript>
+
+
+
+<script type="text/javascript">
+  var vglnk = { api_url: '//api.viglink.com/api',
+                key: '3755fbf465dcd24d7f23d703cb98f0bd' };
+
+  (function(d, t) {
+    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+             '//cdn.viglink.com/api') + '/vglnk.js';
+    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+  }(document, 'script'));
+</script>
+<div id="page-options-bottom-tips" style="display: none;">
+    
+</div>
+<div id="page-options-bottom-2-tips" style="display: none;">
+    
+    
+    
+    <div id="discuss-button-hovertip">
+        If you want to discuss contents of this page - this is the easiest way to do it.    </div>
+    
+    
+    
+    
+    
+    
+            
+        
+        
+        
+        
+    </div><div id="odialog-hovertips" style="position: absolute; z-index: 100; top: 0px; width: 100%;"><div id="edit-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+        Click here to edit contents of this page.    </div></div><div id="edit-sections-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+        Click here to toggle editing of individual sections of the page (if possible).         Watch headings for an "edit" link when available.    </div></div><div id="edit-append-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+        Append content without editing the whole page source.    </div></div><div id="history-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+        Check out how this page has evolved in the past.    </div></div><div id="files-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+        View and manage file attachments for this page.    </div></div><div id="site-tools-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+        A few useful tools to manage this Site.    </div></div><div id="backlinks-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+        See pages that link to and include this page.    </div></div><div id="rename-move-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+        Change the name (also URL address, possibly the category) of the page.    </div></div><div id="view-source-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+        View wiki source for this page without editing.    </div></div><div id="parent-page-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">  
+        View/set parent page (used for creating breadcrumbs and structured layout).    </div></div><div id="abuse-report-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+            Notify administrators if there is objectionable content in this page.        </div></div><div id="bug-report-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+            Something does not work as expected? Find out what you can do.        </div></div><div id="wikidot-help-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+            General <a class="vglnk" rel="nofollow" href="http://wikidot.com/"><span>Wikidot</span><span>.</span><span>com</span></a> documentation and help section.        </div></div><div id="wikidot-tos-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+            <a class="vglnk" rel="nofollow" href="http://wikidot.com/"><span>Wikidot</span><span>.</span><span>com</span></a> Terms of Service - what you can, what you should not etc.        </div></div><div id="wikidot-privacy-button-hovertip" class="hovertip " style="visibility: visible; opacity: 1; position: absolute; display: none; border: 1px solid black;"><div class="content">
+            <a class="vglnk" rel="nofollow" href="http://wikidot.com/"><span>Wikidot</span><span>.</span><span>com</span></a> Privacy Policy.          
+        </div></div></div><div id="naptha_container0932014_0707"></div></body></html>
