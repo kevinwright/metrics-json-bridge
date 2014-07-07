@@ -41,7 +41,7 @@ object Dependencies {
   import Dependency._
  
   val all = Seq(
-    akkaKernel, akkaSlf4j, logback, sprayClient, xml
+    akkaKernel, akkaSlf4j, logback, sprayClient, xml, json4s, scalatest
   )
 }
  
@@ -52,6 +52,8 @@ object Dependency {
     val Logback   = "1.0.0"
     val Spray     = "1.3.1"
     val Xml       = "1.0.2"
+    val Json4s    = "3.2.9"
+    val Scalatest = "2.2.0"
   }
  
   val akkaKernel  = "com.typesafe.akka"      %% "akka-kernel"     % V.Akka
@@ -59,4 +61,6 @@ object Dependency {
   val logback     = "ch.qos.logback"         %  "logback-classic" % V.Logback
   val sprayClient = "io.spray"               %% "spray-can"       % V.Spray
   val xml         = "org.scala-lang.modules" %% "scala-xml"       % V.Xml
+  val json4s      = "org.json4s"             %% "json4s-jackson"  % V.Json4s
+  val scalatest   = "org.scalatest"          %% "scalatest"       % V.Scalatest % "test"
 }
