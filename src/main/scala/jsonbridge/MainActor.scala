@@ -1,8 +1,11 @@
 package jsonbridge
 
-/**
- * Created by 43825798 on 07/07/2014.
- */
-class MainActor {
+import akka.actor.Actor
 
+case object Start
+
+class MainActor extends Actor {
+  def receive = {
+    case Start => println("Hello World!")
+  }
 }

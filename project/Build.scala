@@ -2,6 +2,7 @@ import sbt._
 import Keys._
 import akka.sbt.AkkaKernelPlugin
 import akka.sbt.AkkaKernelPlugin.{ Dist, outputDirectory, distJvmOptions}
+import spray.revolver.RevolverPlugin._
  
 object MasterBuild extends Build {
   val Organization = "net.thecoda"
@@ -11,7 +12,7 @@ object MasterBuild extends Build {
   lazy val Root = Project(
     id = "metrics-json-bridge",
     base = file("."),
-    settings = defaultSettings ++ AkkaKernelPlugin.distSettings ++ Seq(
+    settings = defaultSettings ++ AkkaKernelPlugin.distSettings ++ Revolver.settings ++ Seq(
       resolvers += "spray repo" at "http://repo.spray.io",
       libraryDependencies ++= Dependencies.all,
       distJvmOptions in Dist := "-Xms256M -Xmx1024M",
@@ -55,5 +56,5 @@ object Dependency {
   val akkaKernel  = "com.typesafe.akka" %% "akka-kernel" % V.Akka
   val akkaSlf4j   = "com.typesafe.akka" %% "akka-slf4j"  % V.Akka
   val logback     = "ch.qos.logback"    % "logback-classic" % V.Logback
-  val sprayClient = "io.spray" %% "spray-client" % V.Spray
+  val sprayClient = "io.spray" %% "spray-can" % V.Spray
 }
