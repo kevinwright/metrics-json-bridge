@@ -12,6 +12,7 @@ class MetricsParsingSpec extends FlatSpec with Matchers {
     val text = io.Source.fromInputStream(getClass.getResourceAsStream("/sample.json")).mkString
     assert(text != null)
     val metrics = Metrics.from(text)
+    println(metrics.toGraphiteFormat.mkString("\n"))
   }
 
 }
